@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_type_of_plant"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Plants" />
+
+    <item
+        android:id="@+id/navigation_season_type"
+        android:icon="@drawable/season_type"
+        android:title="Season" />
+
+</menu>

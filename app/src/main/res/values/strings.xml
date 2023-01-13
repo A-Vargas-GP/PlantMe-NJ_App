@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Plant4U-MicroThesis</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string-array name="perennial_plants">
+        <item>Asparagus</item>
+        <item>Strawberries</item>
+        <item>Horseradish</item>
+        <item>Blueberries</item>
+    </string-array>
+
+    <string-array name="annual_plants">
+        <item>Broccoli</item>
+        <item>Cabbage</item>
+        <item>Corn</item>
+        <item>Tomato</item>
+    </string-array>
+
+    <string-array name="cool_crops">
+        <item>Asparagus</item>
+        <item>Blueberries</item>
+        <item>Broccoli</item>
+        <item>Cabbage</item>
+        <item>Corn</item>
+        <item>Strawberries</item>
+    </string-array>
+
+    <string-array name="warm_crops">
+        <item>Horseradish</item>
+        <item>Tomato</item>
+    </string-array>
+
+</resources>
