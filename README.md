@@ -1,24 +1,56 @@
-<h1 style="align: center"> NJ-Plant4U </h1>
+# PlantMe-NJ
+
+# Table of Contents
+- [Web Page](https://www.immseniorshow.com/amy-vargas)
+- [Pitch](#pitch)
+- [Premise](#premise)
+- [Features](#features)
+- [Sample Photos](#projects)
+- [Design Plans](#design-plans)
+- [Previous Mock-Ups](#previous-mock-ups)
+- [Proposal](docs/Final_Proposal-Amy_Vargas.pdf)
+- [Inspiration](#inspiration)
+- [Credits](#credits)
+
+## Pitch
+Pending...
 
 ## Premise
-For my thesis project, my initial plan was to develop a mobile application using my programming skills and design abilities. The main goal is to create the application using Android Studio, but if that is not entirely feasible, then Unity or Flutterflow would serve as a possible alternative. Once created, the app can only be used on Android devices, and to form the design features, I am planning on using Autodesk Maya and Adobe Photoshop/Illustrator for the visual aspect.
+PlantMe-NJ is an Android app dedicated to the aspect of gardening, specifically focusing on New Jersey crops and necessary gardening information, to promote a successful planting season every spring and summer.
 
-In terms of usage, the app would be focused on gardening, specifically selecting which plants would be ideal to plant in New Jersey, mapping out where to plant the crops, and visually displaying the potential plant in a certain spot using AR. It would require the usage of a device’s camera and possibly a location feature.
+The program plans to map the ideal planting spots of your plant beds, depending on the vegetables you have chosen, and it will have a feature that can display a potential plant in a selected spot using AR.
 
-## Sprint Goals
-For my startup sprint, using my thesis idea, I plan to:
-- Design a super basic mobile app that will load on my phone using Android Studio
-- Research on possible vegetable/flower plants that can grow in New Jersey
-- Begin to gather possible reference images based on the plants selected
-
-## Mock App Features
-Within the sprint mobile application, it will have the following features:
-- List of plants and starting planting/transplanting dates
-- Description of each plant
-- Images of plants
-- Home page of the name of the application
+## Features
+* Plant Information
+    - Within the application, crop information will be readily available where a user can view:
+        - List of plants best grown in NJ
+        - Starting planting and harvesting dates
+        - Description of each plant (i.e. spacing, depth, ideal environment)
+* Recently Viewed
+    - On the home page, you will be able to keep track of the last five crops that you have previously seen in older sessions.
+* Plant Selection
+    - Within the application, you will be able to select on two types: plant type or season. Based on your selection, crops from the selected plant type will appear for users to scroll through.
+* Gallery
+    - Within the application, a grid of plant photos will appear for users to tap on and view essential and pertinent information based on the selected plant.
+* AR
+    - Within the application, through the camera feature, you will be able to view a 3D-modeled version of a selected fully-grown crop. The idea is to combine the user’s garden area with plant models, so the user is able to visualize the size and potential of their intended plant.
+* Suggested Distance
+    - Users will be able to take a snapshot of their garden bed or space, and based on their photo, they will be able to drag and form their intended space.
+    - After creating their planting area, suggested planting spots will appear to notify the users of what is the appropriate recommended spacing prior to gardening.
 
 ## Sample Photos
-- Home Page
-- Plant Page
-- Season Page
+Pending...
+
+
+## Design Plans
+Pending...
+
+
+## Previous Mock-Ups
+Pending...
+
+## Inspiration
+Pending...
+
+## Credits
+Pending...
