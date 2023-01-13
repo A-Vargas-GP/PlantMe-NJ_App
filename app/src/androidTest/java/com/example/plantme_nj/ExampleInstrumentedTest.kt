@@ -1,4 +1,4 @@
-package com.example.plant4u_microthesis
+package com.example.plantme_nj
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

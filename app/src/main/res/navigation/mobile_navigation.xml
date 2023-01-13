@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.plant4u_microthesis.ui.home.HomeFragment"
+        android:name="com.example.plantme_nj.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_type_of_plant"
-        android:name="com.example.plant4u_microthesis.ui.dashboard.DashboardFragment"
+        android:name="com.example.plantme_nj.ui.dashboard.DashboardFragment"
         android:label="Plant Types"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_season_type"
-        android:name="com.example.plant4u_microthesis.ui.notifications.NotificationsFragment"
+        android:name="com.example.plantme_nj.ui.notifications.NotificationsFragment"
         android:label="Season"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.plant4u_microthesis.ui.home
+package com.example.plantme_nj.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.plant4u_microthesis.databinding.FragmentHomeBinding
+import com.example.plantme_nj.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 

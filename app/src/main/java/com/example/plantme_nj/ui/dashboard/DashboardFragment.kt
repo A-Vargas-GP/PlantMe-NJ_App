@@ -1,4 +1,4 @@
-package com.example.plant4u_microthesis.ui.notifications
+package com.example.plantme_nj.ui.dashboard
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,26 +9,26 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.plant4u_microthesis.ActivityCoolButton
-import com.example.plant4u_microthesis.ActivityWarmButton
-import com.example.plant4u_microthesis.R
-import com.example.plant4u_microthesis.databinding.FragmentNotificationsBinding
+import com.example.plantme_nj.ActivityButton
+import com.example.plantme_nj.AnnualButton
+import com.example.plantme_nj.R
+import com.example.plantme_nj.databinding.FragmentDashboardBinding
 
-class NotificationsFragment : Fragment() {
+class DashboardFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentDashboardBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val buttonClick: TextView = view.findViewById<Button>(R.id.button_click_cool)
+        val buttonClick: TextView = view.findViewById<Button>(R.id.button_click)
         buttonClick.setOnClickListener {
-            val intent = Intent(context, ActivityCoolButton::class.java)
+            val intent = Intent(context, ActivityButton::class.java)
             startActivity(intent)
         }
 
-        val buttonClicked: TextView = view.findViewById<Button>(R.id.button_click_warm)
+        val buttonClicked: TextView = view.findViewById<Button>(R.id.button2_click)
         buttonClicked.setOnClickListener {
-            val intent = Intent(context, ActivityWarmButton::class.java)
+            val intent = Intent(context, AnnualButton::class.java)
             startActivity(intent)
         }
     }
@@ -42,14 +42,15 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        val dashboardViewModel =
+            ViewModelProvider(this)[DashboardViewModel::class.java]
+
+        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textPlant
+        dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

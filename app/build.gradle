@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.plant4u_microthesis"
+        applicationId "com.example.plantme_nj"
         minSdk 21
         targetSdk 32
         versionCode 1

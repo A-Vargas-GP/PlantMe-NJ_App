@@ -1,4 +1,4 @@
-package com.example.plant4u_microthesis.ui.notifications
+package com.example.plantme_nj.ui.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

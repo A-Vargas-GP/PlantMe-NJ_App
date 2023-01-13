@@ -1,4 +1,4 @@
-package com.example.plant4u_microthesis
+package com.example.plantme_nj
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.plant4u_microthesis.databinding.ActivityMainBinding
+import com.example.plantme_nj.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -23,12 +23,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
          */
-        setContentView(R.layout.activity_main)
 
-        /*
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-         */
 
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)

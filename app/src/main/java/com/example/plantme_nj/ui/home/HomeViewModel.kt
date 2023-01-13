@@ -1,4 +1,4 @@
-package com.example.plant4u_microthesis.ui.home
+package com.example.plantme_nj.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
