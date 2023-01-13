@@ -28,7 +28,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="NJ-Plant4U"
+        android:text="PlantMe-NJ"
         android:textAlignment="center"
         android:textSize="48sp"
         tools:layout_editor_absoluteX="50dp"
