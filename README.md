@@ -10,6 +10,7 @@
 - [Previous Mock-Ups](#previous-mock-ups)
 - [Proposal](docs/Final_Proposal-Amy_Vargas.pdf)
 - [Inspiration](#inspiration)
+- [Key Terms](#key-terms)
 - [Credits](#credits)
 
 ## Pitch
@@ -51,6 +52,12 @@ Pending...
 
 ## Inspiration
 Pending...
+
+## Key Terms
+- Perennial Plant: plants that live for more than two years
+- Annual Plant: plants that flower and die in one season
+- Cool Season: Spring and fall
+- Warm Season: Summer
 
 ## Credits
 Pending...
