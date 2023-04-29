@@ -12,14 +12,26 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_type_of_plant"
-        android:name="com.example.plantme_nj.ui.dashboard.DashboardFragment"
-        android:label="Plant Types"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_ar"
+        android:name="com.example.plantme_nj.ui.ar_page.ARPageFragment"
+        android:label="AR"
+        tools:layout="@layout/fragment_ar_page" />
 
     <fragment
-        android:id="@+id/navigation_season_type"
-        android:name="com.example.plantme_nj.ui.notifications.NotificationsFragment"
-        android:label="Season"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_plants"
+        android:name="com.example.plantme_nj.ui.plant_suggestion.PlantSuggestionFragment"
+        android:label="Plant Suggestion"
+        tools:layout="@layout/fragment_plant_suggestion" />
+
+    <fragment
+        android:id="@+id/navigation_type_of_plant"
+        android:name="com.example.plantme_nj.ui.plant_types.PlantTypesFragment"
+        android:label="Plant Types"
+        tools:layout="@layout/fragment_plant_types" />
+
+    <fragment
+        android:id="@+id/navigation_more_options"
+        android:name="com.example.plantme_nj.ui.more_options.MoreOptionsFragment"
+        android:label="More Options"
+        tools:layout="@layout/fragment_more_options" />
 </navigation>

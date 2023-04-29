@@ -3,12 +3,54 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25153961181640627" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_splash.xml" value="0.2475" />
+        <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2275" />
+        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.133" />
+        <entry key="app/src/main/res/drawable/plants_type.xml" value="0.2275" />
+        <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.207" />
+        <entry key="app/src/main/res/drawable/season_type.xml" value="0.177" />
+        <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.1145" />
+        <entry key="app/src/main/res/drawable/testing_vector.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.115234375" />
+        <entry key="app/src/main/res/layout/activity_2.xml" value="0.225" />
+        <entry key="app/src/main/res/layout/activity_annual_button.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_annual_plants.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/layout/activity_aractivity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cool_button.xml" value="0.27722930908203125" />
+        <entry key="app/src/main/res/layout/activity_cool_plants.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_indiv_plant.xml" value="0.24576009114583336" />
+        <entry key="app/src/main/res/layout/activity_individual_plant.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1393758016246259" />
+        <entry key="app/src/main/res/layout/activity_perennial_plants.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_plant_individual.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/activity_plant_suggestions.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/activity_plant_types.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/activity_plant_types_selected.xml" value="0.20832544275232268" />
+        <entry key="app/src/main/res/layout/activity_seasons_selected.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.3140625" />
         <entry key="app/src/main/res/layout/activity_warm_button.xml" value="0.3140625" />
+        <entry key="app/src/main/res/layout/activity_warm_plants.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/content_plant_individual.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.3140625" />
+        <entry key="app/src/main/res/layout/explore_plant_types.xml" value="0.2697097778320312" />
+        <entry key="app/src/main/res/layout/explore_seasons.xml" value="0.25509033203125" />
+        <entry key="app/src/main/res/layout/fragment_ar_page.xml" value="0.17004241943359377" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3140625" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3140625" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1925764192139738" />
+        <entry key="app/src/main/res/layout/fragment_individual_plant.xml" value="0.25347900390625" />
+        <entry key="app/src/main/res/layout/fragment_more_options.xml" value="0.4113785557986871" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/fragment_plant_suggestion.xml" value="0.22274476271911073" />
+        <entry key="app/src/main/res/layout/fragment_plant_types.xml" value="0.25097808837890623" />
+        <entry key="app/src/main/res/layout/fragment_plant_types_selected.xml" value="0.20849609375" />
+        <entry key="app/src/main/res/layout/fragment_seasons_selected.xml" value="0.2546875" />
+        <entry key="app/src/main/res/layout/plant_individual.xml" value="0.26875" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3140625" />
       </map>
     </option>
   </component>

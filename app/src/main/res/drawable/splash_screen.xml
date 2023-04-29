@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/background_splash" />
+    <item>
+        <bitmap android:gravity="center"
+            android:width="240dp"
+            android:height="240dp"
+            android:src="@drawable/plantme_colored_final_inverted_export_small_og" />
+    </item>
+</layer-list>

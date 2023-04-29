@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.plantme_nj">
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Limits app visibility in the Google Play Store to ARCore supported devices
+         (https://developers.google.com/ar/devices). -->
+    <uses-feature android:name="android.hardware.camera.ar" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +18,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PlantMe_NJ"
-        tools:targetApi="31">
+        tools:targetApi="32">
+        <activity
+            android:name=".ARActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.warm_plants.WarmPlantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.cool_plants.CoolPlantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.perennial_plants.PerennialPlantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.annual_plants.AnnualPlantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.plant_types_selected.PlantTypesSelectedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.plant_individual.IndivPlantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ARView.ARActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.seasons.SeasonsSelectedActivity"
+            android:exported="false" />
         <activity
             android:name=".ActivityCoolButton"
             android:exported="false" />
@@ -28,13 +61,17 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
     </application>
 
 </manifest>

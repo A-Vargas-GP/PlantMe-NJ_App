@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_constraintBottom_toBottomOf="parent"
+    >
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/icons_white_home"
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_type_of_plant"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:id="@+id/navigation_ar"
+        android:icon="@drawable/icons_white_ar"
+        android:title="AR" />
+
+    <item
+        android:id="@+id/navigation_plants"
+        android:icon="@drawable/icons_white_plant_selection"
         android:title="Plants" />
 
     <item
-        android:id="@+id/navigation_season_type"
-        android:icon="@drawable/season_type"
-        android:title="Season" />
+        android:id="@+id/navigation_type_of_plant"
+        android:icon="@drawable/icons_white_plant_type_and_season"
+        android:title="Plant Types" />
+
+    <item
+        android:id="@+id/navigation_more_options"
+        android:icon="@drawable/icons_white_more_option"
+        android:title="More" />
 
 </menu>

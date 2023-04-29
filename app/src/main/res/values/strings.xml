@@ -1,9 +1,98 @@
 <resources>
-    <string name="app_name">PlantMe_NJ</string>
+    <string name="app_name">PlantMe-NJ</string>
+    <string name="home_screen_title">Welcome to PlantMe-NJ</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="more_options_title">More Options</string>
+    <string name="gallery_title">Gallery</string>
+    <string name="last_viewed_title">Last Viewed</string>
+
+    <string name="home_weather_screen">Your Current Location:</string>
+    <string name="home_weather_example">Temperature:</string>
+
+    <string name="plant_spot_advice_title">Planting Spot Advice</string>
+    <string name="plant_spot_advice_direction">Please Select a Plant</string>
+
+    <string name="ar_plant_title">Plants in AR</string>
+    <string name="ar_plant_direction">Please Select a Plant</string>
+
+    <string name="plant_types_title">Plant Types vs Seasons</string>
+    <string name="plant_types_direction">Please Select an Option</string>
+    <string name="plant_types_option1">Plant Type</string>
+    <string name="plant_types_option2">Season</string>
+
+    <string name="plant_types_explore_types">Explore the plant types</string>
+    <string name="plant_types_perennial">Perennial</string>
+    <string name="plant_types_annual">Annual</string>
+
+    <string name="plant_types_explore_season">Explore the seasons</string>
+    <string name="plant_types_cool">Cool</string>
+    <string name="plant_types_warm">Warm</string>
+
+    <string name="plant_types_selected_perennial_title">Perennial Plants</string>
+    <string name="plant_types_selected_annual_title">Annual Plants</string>
+    <string name="plant_types_selected_cool_title">Cool Plants</string>
+    <string name="plant_types_selected_warm_title">Warm Plants</string>
+    <string name="plant_types_selected_direction">Please select a plant</string>
+
+    <string name="plant1">Bell Pepper</string>
+    <string name="plant2">Chives</string>
+    <string name="plant3">Jalapeño</string>
+    <string name="plant4">Lettuce</string>
+    <string name="plant5">Radish</string>
+    <string name="plant6">Strawberry</string>
+    <string name="plant7">Tomato</string>
+    <string name="plant8">Watermelon</string>
+
+    <string name="plant_individual_about_me">About Me:</string>
+    <string name="plant_individual_season">Season:</string>
+    <string name="plant_individual_plant_type">Plant Type:</string>
+    <string name="plant_individual_environment">Environment:</string>
+    <string name="plant_individual_lighting_time">Lighting Time:</string>
+    <string name="plant_individual_indoor_planting_time">Indoor Planting Time:</string>
+    <string name="plant_individual_outdoor_planting_time">Outdoor Planting Time:</string>
+    <string name="plant_individual_planting_distance">Planting Distance:</string>
+    <string name="plant_individual_planting_distance_depth">Planting Distance Depth:</string>
+    <string name="plant_individual_watering_time">Watering Time:</string>
+    <string name="plant_individual_maturity">Maturity:</string>
+
+    <!-- AR-RELEVANT STRINGS -->
+    <!-- FROM TUTORIAL -->
+    <string name="viking">Viking</string>
+    <string name="cannon">Cannon</string>
+    <string name="target">Target</string>
+    <!-- END TUTORIAL -->
+    <string name="plant">Plant</string>
+
+    <string name="camera_permission_toast">Camera permission is needed to run this application</string>
+    <string name="searching_for_surfaces">Searching for surfaces...</string>
+    <string name="ar_device_support">This device does not support AR</string>
+    <string name="camera_not_available">Camera not available. Try restarting the app.</string>
+    <string name="arcore_install_failed">Unexpected failure during ArCoreApk install request</string>
+    <string name="please_install_arcore">Please install ARCore</string>
+    <string name="please_update_arcore">Please update ARCore</string>
+    <string name="please_update_app">Please update this app</string>
+    <string name="arcore_not_supported">This device does not support AR</string>
+    <string name="failed_to_create_session">Failed to create AR session</string>
+    <string name="camera_permission_needed">Camera permission is needed to run this application</string>
+    <!-- FROM TUTORIAL -->
+    <string name="model_grid_png">models/trigrid.png</string>
+    <string name="model_viking_obj">models/viking.obj</string>
+    <string name="model_viking_png">models/viking.png</string>
+    <string name="model_cannon_obj">models/cannon.obj</string>
+    <string name="model_cannon_png">models/cannon.png</string>
+    <string name="model_target_obj">models/target.obj</string>
+    <string name="model_target_png">models/target.png</string>
+    <!-- END TUTORIAL -->
+    <string name="model_plant1_obj">models/plant1.obj</string>
+    <string name="model_plant1_png">models/plant1.png</string>
+
+    <string name="failed_to_read_asset">Failed to read an asset file</string>
+    <string name="exception_on_opengl">Exception on the OpenGL thread</string>
+
+    <!-- OLD STRINGS -->
     <string-array name="perennial_plants">
         <item>Asparagus</item>
         <item>Strawberries</item>
@@ -31,5 +120,107 @@
         <item>Horseradish</item>
         <item>Tomato</item>
     </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_plant_suggestions">PlantSuggestionsActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_plant_individual">PlantIndividual</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>

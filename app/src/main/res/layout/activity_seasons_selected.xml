@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.plant_types_selected.PlantTypesSelectedActivity">
+
+    <TextView
+        android:id="@+id/seasons_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/plant_types_explore_season"
+        android:textAlignment="center"
+        android:textColor="@color/turquoise"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cool_season"
+        android:layout_width="300dp"
+        android:layout_marginTop="-10dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/seasons_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"
+        android:text="@string/plant_types_cool"
+        android:textAllCaps="false"
+        android:textColor="@color/turquoise"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/warm_season"
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/cool_season"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"
+        android:text="@string/plant_types_warm"
+        android:textAllCaps="false"
+        android:textColor="@color/turquoise"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/cool_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@id/warm_season"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/plant_types_cool"
+        android:textColor="@color/turquoise"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cool_side_scrolling"
+        android:layout_below="@id/cool_title">
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/CoolPlant1"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:drawableTop="@drawable/chives"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant2"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/CoolPlant2"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/CoolPlant1"
+                android:layout_toEndOf="@+id/CoolPlant1"
+                android:drawableTop="@drawable/lettuce"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant4"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/CoolPlant3"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/CoolPlant2"
+                android:layout_toEndOf="@+id/CoolPlant2"
+                android:drawableTop="@drawable/radish"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant5"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/CoolPlant4"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/CoolPlant3"
+                android:layout_toEndOf="@+id/CoolPlant3"
+                android:drawableTop="@drawable/strawberries"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant6"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/warm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@id/cool_side_scrolling"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/plant_types_warm"
+        android:textColor="@color/turquoise"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/warm_side_scrolling"
+        android:layout_below="@id/warm_title">
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/WarmPlant1"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:drawableTop="@drawable/bell_peppers"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant1"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/WarmPlant2"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/WarmPlant1"
+                android:layout_toEndOf="@+id/WarmPlant1"
+                android:drawableTop="@drawable/jalapenos"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant3"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/WarmPlant3"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/WarmPlant2"
+                android:layout_toEndOf="@+id/WarmPlant2"
+                android:drawableTop="@drawable/tomatoes"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant7"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/WarmPlant4"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/WarmPlant3"
+                android:layout_toEndOf="@+id/WarmPlant3"
+                android:drawableTop="@drawable/watermelon"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_corner"
+                android:text="@string/plant8"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/dark_navy"
+                app:layout_constraintBottom_toTopOf="parent" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
