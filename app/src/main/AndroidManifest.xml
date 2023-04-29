@@ -20,7 +20,7 @@
         android:theme="@style/Theme.PlantMe_NJ"
         tools:targetApi="32">
         <activity
-            android:name=".ARActivity"
+            android:name=".ui.ARView.ARActivity"
             android:exported="false" />
         <activity
             android:name=".ui.warm_plants.WarmPlantsActivity"
@@ -39,9 +39,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.plant_individual.IndivPlantActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ARView.ARActivity"
             android:exported="false" />
         <activity
             android:name=".ui.seasons.SeasonsSelectedActivity"
