@@ -29,9 +29,9 @@
         android:label="Plant Types"
         tools:layout="@layout/fragment_plant_types" />
 
-    <fragment
-        android:id="@+id/navigation_more_options"
-        android:name="com.example.plantme_nj.ui.more_options.MoreOptionsFragment"
-        android:label="More Options"
-        tools:layout="@layout/fragment_more_options" />
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_more_options"-->
+<!--        android:name="com.example.plantme_nj.ui.more_options.MoreOptionsFragment"-->
+<!--        android:label="More Options"-->
+<!--        tools:layout="@layout/fragment_more_options" />-->
 </navigation>

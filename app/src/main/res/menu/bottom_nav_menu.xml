@@ -25,9 +25,9 @@
         android:icon="@drawable/icons_white_plant_type_and_season"
         android:title="Plant Types" />
 
-    <item
-        android:id="@+id/navigation_more_options"
-        android:icon="@drawable/icons_white_more_option"
-        android:title="More" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_more_options"-->
+<!--        android:icon="@drawable/icons_white_more_option"-->
+<!--        android:title="More" />-->
 
 </menu>
