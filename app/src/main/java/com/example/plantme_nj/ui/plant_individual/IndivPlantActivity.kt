@@ -2,6 +2,8 @@ package com.example.plantme_nj.ui.plant_individual
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.SQLiteHelper
@@ -64,5 +66,10 @@ class IndivPlantActivity : AppCompatActivity() {
         textWatering1Detail.text = dbHelper.getCurrentPlantWater1(profileName)
         textWatering2Detail.text = dbHelper.getCurrentPlantWater2(profileName)
         textMaturityDetail.text = dbHelper.getCurrentPlantMaturity(profileName)
+
+        val buttonClick = findViewById<ImageButton>(R.id.returnButton)
+        buttonClick.setOnClickListener {
+            finish()
+        }
     }
 }

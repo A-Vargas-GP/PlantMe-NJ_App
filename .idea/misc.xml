@@ -21,7 +21,7 @@
         <entry key="app/src/main/res/layout/activity_aractivity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_cool_button.xml" value="0.27722930908203125" />
         <entry key="app/src/main/res/layout/activity_cool_plants.xml" value="0.17447916666666666" />
-        <entry key="app/src/main/res/layout/activity_indiv_plant.xml" value="0.24576009114583336" />
+        <entry key="app/src/main/res/layout/activity_indiv_plant.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_individual_plant.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1393758016246259" />
         <entry key="app/src/main/res/layout/activity_perennial_plants.xml" value="0.17447916666666666" />
@@ -29,7 +29,7 @@
         <entry key="app/src/main/res/layout/activity_plant_suggestions.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/activity_plant_types.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/activity_plant_types_selected.xml" value="0.20832544275232268" />
-        <entry key="app/src/main/res/layout/activity_seasons_selected.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_seasons_selected.xml" value="0.1255294799804687" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.3140625" />
         <entry key="app/src/main/res/layout/activity_warm_button.xml" value="0.3140625" />
         <entry key="app/src/main/res/layout/activity_warm_plants.xml" value="0.17447916666666666" />

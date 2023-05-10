@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.plantme_nj.R
 import com.example.plantme_nj.ui.annual_plants.AnnualPlantsActivity
 import com.example.plantme_nj.ui.cool_plants.CoolPlantsActivity
@@ -87,6 +88,12 @@ class SeasonsSelectedActivity : AppCompatActivity() {
             val intent = Intent(this, IndivPlantActivity::class.java)
             intent.putExtra("Plant", "Watermelon")
             startActivity(intent)
+        }
+
+        //Back Button
+        val buttonClick = findViewById<ImageButton>(R.id.returnButton)
+        buttonClick.setOnClickListener {
+            finish()
         }
 
     }

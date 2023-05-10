@@ -8,6 +8,13 @@
     android:background="@color/white"
     tools:context=".ui.annual_plants.AnnualPlantsActivity">
 
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/icons_filled_back_button_v3" />
+
     <TextView
         android:id="@+id/annual_plants_title"
         android:layout_width="wrap_content"

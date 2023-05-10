@@ -9,6 +9,13 @@
     android:id = "@+id/main_layout"
     tools:context=".ui.plant_types_selected.PlantTypesSelectedActivity">
 
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/icons_filled_back_button_v3" />
+
     <TextView
         android:id="@+id/plant_type_title"
         android:layout_width="wrap_content"
@@ -31,6 +38,7 @@
         android:layout_marginTop="-10dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/icons_filled_perennial"
         android:text="@string/plant_types_perennial"
         android:textAllCaps="false"
         android:textColor="@color/turquoise"
@@ -44,6 +52,7 @@
         android:layout_below="@id/perennial_type"
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/icons_filled_annual"
         android:text="@string/plant_types_annual"
         android:textAllCaps="false"
         android:textColor="@color/turquoise"

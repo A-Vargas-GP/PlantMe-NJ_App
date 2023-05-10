@@ -10,7 +10,11 @@
     <string name="last_viewed_title">Last Viewed</string>
 
     <string name="home_weather_screen">Your Current Location:</string>
-    <string name="home_weather_example">Temperature:</string>
+    <string name="home_weather_datetime">Current Date/Time:</string>
+    <string name="home_weather_conditions">Current Conditions:</string>
+    <string name="home_weather_temp">Temperature:</string>
+    <string name="home_weather_sunrise">Sunrise:</string>
+    <string name="home_weather_sunset">Sunset:</string>
 
     <string name="plant_spot_advice_title">Planting Spot Advice</string>
     <string name="plant_spot_advice_direction">Please Select a Plant</string>

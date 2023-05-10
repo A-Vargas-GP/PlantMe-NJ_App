@@ -8,6 +8,13 @@
     android:background="@color/white"
     tools:context=".ui.plant_types_selected.PlantTypesSelectedActivity">
 
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/icons_filled_back_button_v3" />
+
     <TextView
         android:id="@+id/seasons_title"
         android:layout_width="wrap_content"
@@ -24,13 +31,15 @@
 
     <Button
         android:id="@+id/cool_season"
-        android:layout_width="300dp"
-        android:layout_marginTop="-10dp"
-        android:layout_height="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/seasons_title"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
         android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/icons_filled_cool"
         android:text="@string/plant_types_cool"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/turquoise"
         android:textSize="25sp" />
@@ -38,11 +47,12 @@
     <Button
         android:id="@+id/warm_season"
         android:layout_marginTop="10dp"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/cool_season"
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_corner"
+        android:drawableLeft="@drawable/icons_filled_warm"
         android:text="@string/plant_types_warm"
         android:textAllCaps="false"
         android:textColor="@color/turquoise"

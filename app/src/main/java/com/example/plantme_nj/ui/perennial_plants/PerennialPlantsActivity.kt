@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import com.SQLiteHelper
 import com.example.plantme_nj.R
 import com.example.plantme_nj.ui.annual_plants.AnnualPlantsActivity
@@ -41,6 +42,12 @@ class PerennialPlantsActivity : AppCompatActivity() {
             val intent = Intent(this, IndivPlantActivity::class.java)
             intent.putExtra("Plant", "Strawberry")
             startActivity(intent)
+        }
+
+        //Back Button
+        val buttonClick = findViewById<ImageButton>(R.id.returnButton)
+        buttonClick.setOnClickListener {
+            finish()
         }
 
     }

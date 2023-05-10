@@ -14,15 +14,6 @@
         tools:context=".ui.home.HomeFragment">
 
         <TextView
-            android:id="@+id/text_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/activity_horizontal_margin"
-            android:textAlignment="center"
-            android:textSize="1sp"
-            tools:ignore="SmallSp" />
-
-        <TextView
             android:id="@+id/title_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,8 +34,11 @@
             android:src="@drawable/plantme_inverted_color" />
 
         <TextView
-            android:id="@+id/location_text"
-            android:layout_width="match_parent"
+            android:id="@+id/location_title"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
             android:fontFamily="sans-serif-medium"
@@ -52,20 +46,165 @@
             android:text="@string/home_weather_screen"
             android:textAlignment="center"
             android:textColor="@color/turquoise"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/temperature_text"
-            android:layout_width="match_parent"
-            android:layout_margin="20dp"
+            android:id="@+id/location_text"
+            android:freezesText="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/location_title"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Testing"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dateTime_title"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
             android:layout_below="@id/location_text"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="@string/home_weather_example"
+            android:text="@string/home_weather_datetime"
             android:textAlignment="center"
             android:textColor="@color/turquoise"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/dateTime_text"
+            android:freezesText="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/dateTime_title"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Testing"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/condition_title"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/dateTime_text"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/home_weather_conditions"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/condition_text"
+            android:freezesText="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/condition_title"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Testing"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/temperature_title"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/condition_text"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/home_weather_temp"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/temperature_text"
+            android:freezesText="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/temperature_title"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Testing"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sunrise_title"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/temperature_text"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/home_weather_sunrise"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sunrise_text"
+            android:freezesText="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/sunrise_title"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Testing"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sunset_title"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/sunrise_text"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/home_weather_sunset"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sunset_text"
+            android:freezesText="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/sunset_title"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Testing"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="18sp" />
     </RelativeLayout>
 </ScrollView>

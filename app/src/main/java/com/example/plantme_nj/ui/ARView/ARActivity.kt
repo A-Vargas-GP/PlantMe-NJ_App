@@ -1,5 +1,6 @@
 package com.example.plantme_nj.ui.ARView
 
+import android.annotation.SuppressLint
 import android.opengl.GLES20
 import android.opengl.GLSurfaceView
 import androidx.appcompat.app.AppCompatActivity
@@ -43,8 +44,9 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     private val planeRenderer: PlaneRenderer = PlaneRenderer()
     private val pointCloudRenderer: PointCloudRenderer = PointCloudRenderer()
 
-    private val plantObject = ObjectRenderer()
-    private var plantAttachment: PlaneAttachment? = null
+    //Will be the plant models
+//    private val plantObject = ObjectRenderer()
+//    private var plantAttachment: PlaneAttachment? = null
 
     //FROM TUTORIAL
     private val vikingObject = ObjectRenderer()
@@ -61,12 +63,10 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     private val anchorMatrix = FloatArray(maxAllocationSize)
     private val queuedSingleTaps = ArrayBlockingQueue<MotionEvent>(maxAllocationSize)
 
-    //Issue here??
     private lateinit var gLView: GLSurfaceView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         gLView = GLSurfaceView(this)
         setContentView(gLView)
 //        setContentView(R.layout.activity_aractivity)
@@ -80,13 +80,13 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
         setupSurfaceView()
     }
 
-    fun onRadioButtonClicked(view: View) {
-        when (view.id) {
-            R.id.radioCannon -> mode = Mode.CANNON
-            R.id.radioTarget -> mode = Mode.TARGET
-            else -> mode = Mode.VIKING
-        }
-    }
+//    fun onRadioButtonClicked(view: View) {
+//        when (view.id) {
+//            R.id.radioCannon -> mode = Mode.CANNON
+//            R.id.radioTarget -> mode = Mode.TARGET
+//            else -> mode = Mode.VIKING
+//        }
+//    }
 
     private fun setupSurfaceView() {
         // Set up renderer.
@@ -203,12 +203,12 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
         }
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
         results: IntArray
     ) {
-        super.onRequestPermissionsResult(requestCode, permissions, results)
         if (!CameraPermissionHelper.hasCameraPermission(this@ARActivity)) {
             Toast.makeText(
                 this@ARActivity,
@@ -241,7 +241,13 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
             planeRenderer.createOnGlThread(this@ARActivity, getString(R.string.model_grid_png))
             pointCloudRenderer.createOnGlThread(this@ARActivity)
 
-            // TODO - set up the objects
+            // TODO - set up the 3D objects
+            //1
+            vikingObject.createOnGlThread(this@ARActivity, getString(R.string.model_viking_obj), getString(R.string.model_viking_png))
+
+            //2
+            vikingObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+
         } catch (e: IOException) {
             Log.e(TAG, getString(R.string.failed_to_read_asset), e)
         }
@@ -294,23 +300,23 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
                     lightIntensity
                 )
 
-                drawObject(
-                    cannonObject,
-                    cannonAttachment,
-                    Mode.CANNON.scaleFactor,
-                    projectionMatrix,
-                    viewMatrix,
-                    lightIntensity
-                )
-
-                drawObject(
-                    targetObject,
-                    targetAttachment,
-                    Mode.TARGET.scaleFactor,
-                    projectionMatrix,
-                    viewMatrix,
-                    lightIntensity
-                )
+//                drawObject(
+//                    cannonObject,
+//                    cannonAttachment,
+//                    Mode.CANNON.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    targetObject,
+//                    targetAttachment,
+//                    Mode.TARGET.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
 
             } catch (t: Throwable) {
                 Log.e(TAG, getString(R.string.exception_on_opengl), t)
@@ -446,11 +452,13 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
                             && trackable.orientationMode
                             == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)
                 ) {
-                    when (mode) {
-                        Mode.VIKING -> vikingAttachment = addSessionAnchorFromAttachment(vikingAttachment!!, hit)
-                        Mode.CANNON -> cannonAttachment = addSessionAnchorFromAttachment(cannonAttachment!!, hit)
-                        Mode.TARGET -> targetAttachment = addSessionAnchorFromAttachment(targetAttachment!!, hit)
-                    }
+                    vikingAttachment = addSessionAnchorFromAttachment(vikingAttachment, hit)
+
+//                    when (mode) {
+//                        Mode.VIKING -> vikingAttachment = addSessionAnchorFromAttachment(vikingAttachment, hit)
+////                        Mode.CANNON -> cannonAttachment = addSessionAnchorFromAttachment(cannonAttachment, hit)
+////                        Mode.TARGET -> targetAttachment = addSessionAnchorFromAttachment(targetAttachment, hit)
+//                    }
                     // TODO: Create an anchor if a plane or an oriented point was hit
                     break
                 }
@@ -459,13 +467,15 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     }
 
     // TODO: Add addSessionAnchorFromAttachment() function here
-    private fun addSessionAnchorFromAttachment(previousAttachment: PlaneAttachment, hit: HitResult?): PlaneAttachment
-    {
+    private fun addSessionAnchorFromAttachment(
+        previousAttachment: PlaneAttachment?,
+        hit: HitResult
+    ): PlaneAttachment? {
         // 1
-        previousAttachment.anchor.detach()
+        previousAttachment?.anchor?.detach()
 
         // 2
-        val plane = hit?.trackable as Plane
+        val plane = hit.trackable as Plane
         val anchor = session!!.createAnchor(hit.hitPose)
 
         // 3
