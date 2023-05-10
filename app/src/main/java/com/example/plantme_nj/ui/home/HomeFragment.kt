@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.locationText
+        val textView: TextView = binding.topText
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

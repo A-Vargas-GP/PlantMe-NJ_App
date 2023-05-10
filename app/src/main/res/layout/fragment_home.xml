@@ -14,6 +14,18 @@
         tools:context=".ui.home.HomeFragment">
 
         <TextView
+            android:id="@+id/topText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/home_screen_title"
+            android:textAlignment="center"
+            android:textColor="@color/turquoise"
+            android:textSize="25sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
             android:id="@+id/title_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

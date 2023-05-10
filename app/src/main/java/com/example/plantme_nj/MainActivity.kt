@@ -18,6 +18,8 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Build
 import android.os.PersistableBundle
+import android.provider.Contacts.SettingsColumns.KEY
+import android.provider.Settings.NameValueTable.VALUE
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
@@ -57,6 +59,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var conditionsTextView: TextView
     lateinit var sunriseTextView: TextView
     lateinit var sunsetTextView: TextView
+
+    lateinit var location: String
 
     var fusedLocationClient: FusedLocationProviderClient?=null
     var currentLocation:Location?=null
@@ -162,6 +166,19 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        outState.putString("location", location)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        val mString = savedInstanceState.getString("location")
+        Log.e("location", mString.toString())
+        locationTextView.text = mString.toString()
+    }
+
     //Meant to gather current location
     @SuppressLint("MissingPermission")
     fun obtainLocation()
@@ -227,8 +244,10 @@ class MainActivity : AppCompatActivity() {
                 val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
                 val formatted = current.format(formatter)
 
+                location = obj2.getString("city_name")
                 // set the temperature and the city
                 // name using getString() function
+
                 locationTextView.text = obj2.getString("city_name")
                 temperatureTextView.text = String.format("%.2f", currTemp) + " deg Fahrenheit"
                 dateTimeTextView.text = formatted
