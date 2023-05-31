@@ -29,9 +29,61 @@ class ARPageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val buttonARTesting = view.findViewById<Button>(R.id.PlantAR1)
-        buttonARTesting.setOnClickListener {
+        //Buttons
+        val buttonAR1 = view.findViewById<Button>(R.id.PlantAR1)
+        val buttonAR2 = view.findViewById<Button>(R.id.PlantAR2)
+        val buttonAR3 = view.findViewById<Button>(R.id.PlantAR3)
+        val buttonAR4 = view.findViewById<Button>(R.id.PlantAR4)
+        val buttonAR5 = view.findViewById<Button>(R.id.PlantAR5)
+        val buttonAR6 = view.findViewById<Button>(R.id.PlantAR6)
+        val buttonAR7 = view.findViewById<Button>(R.id.PlantAR7)
+        val buttonAR8 = view.findViewById<Button>(R.id.PlantAR8)
+
+        buttonAR1.setOnClickListener {
             val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Bell Pepper")
+            startActivity(intent)
+        }
+
+        buttonAR2.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Chives")
+            startActivity(intent)
+        }
+
+        buttonAR3.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Jalapeño")
+            startActivity(intent)
+        }
+
+        buttonAR4.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Lettuce")
+            startActivity(intent)
+        }
+
+        buttonAR5.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Radish")
+            startActivity(intent)
+        }
+
+        buttonAR6.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Strawberry")
+            startActivity(intent)
+        }
+
+        buttonAR7.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Tomato")
+            startActivity(intent)
+        }
+
+        buttonAR8.setOnClickListener {
+            val intent = Intent(activity, ARActivity::class.java)
+            intent.putExtra("AR_Plant", "Watermelon")
             startActivity(intent)
         }
     }

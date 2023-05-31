@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/roboto_black"
             android:textColor="@color/turquoise"
             android:textSize="30sp"
             android:textAlignment="center"
@@ -33,7 +33,7 @@
             android:layout_marginVertical="@dimen/activity_horizontal_margin"
             android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
             android:layout_below="@id/plant_in_ar_title"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/roboto_bold"
             android:textColor="@color/turquoise"
             android:textSize="20sp"
             android:text="@string/ar_plant_direction"
@@ -49,6 +49,7 @@
                 android:drawableTop="@drawable/bell_peppers"
                 android:padding="10dp"
                 android:gravity="center"
+                android:fontFamily="@font/roboto_black"
                 android:background="@drawable/rounded_corner"
                 android:text="@string/plant1"
                 android:textSize="15sp"
@@ -67,6 +68,7 @@
                 android:padding="10dp"
                 android:gravity="center"
                 android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/roboto_black"
                 android:text="@string/plant2"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
@@ -84,6 +86,7 @@
                 android:gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:text="@string/plant3"
+                android:fontFamily="@font/roboto_black"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
                 app:layout_constraintBottom_toTopOf="parent" />
@@ -101,6 +104,7 @@
                 android:gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:text="@string/plant4"
+                android:fontFamily="@font/roboto_black"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
                 app:layout_constraintBottom_toTopOf="parent" />
@@ -117,6 +121,7 @@
                 android:gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:text="@string/plant5"
+                android:fontFamily="@font/roboto_black"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
                 app:layout_constraintBottom_toTopOf="parent" />
@@ -134,6 +139,7 @@
                 android:gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:text="@string/plant6"
+                android:fontFamily="@font/roboto_black"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
                 app:layout_constraintBottom_toTopOf="parent" />
@@ -150,6 +156,7 @@
                 android:padding="10dp"
                 android:gravity="center"
                 android:text="@string/plant7"
+                android:fontFamily="@font/roboto_black"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
                 app:layout_constraintBottom_toTopOf="parent" />
@@ -167,6 +174,7 @@
                 android:gravity="center"
                 android:background="@drawable/rounded_corner"
                 android:text="@string/plant8"
+                android:fontFamily="@font/roboto_black"
                 android:textSize="15sp"
                 android:textColor="@color/dark_navy"
                 app:layout_constraintBottom_toTopOf="parent" />

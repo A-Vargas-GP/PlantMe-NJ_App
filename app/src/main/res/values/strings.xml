@@ -9,12 +9,14 @@
     <string name="gallery_title">Gallery</string>
     <string name="last_viewed_title">Last Viewed</string>
 
-    <string name="home_weather_screen">Your Current Location:</string>
-    <string name="home_weather_datetime">Current Date/Time:</string>
-    <string name="home_weather_conditions">Current Conditions:</string>
+    <string name="home_weather_screen">Location:</string>
+    <string name="home_weather_conditions">Conditions:</string>
     <string name="home_weather_temp">Temperature:</string>
+    <string name="home_weather_real_feel">Real Feel:</string>
     <string name="home_weather_sunrise">Sunrise:</string>
     <string name="home_weather_sunset">Sunset:</string>
+    <string name="home_weather_humidity">Humidity:</string>
+    <string name="home_weather_wind">Wind:</string>
 
     <string name="plant_spot_advice_title">Planting Spot Advice</string>
     <string name="plant_spot_advice_direction">Please Select a Plant</string>
@@ -68,7 +70,6 @@
     <string name="cannon">Cannon</string>
     <string name="target">Target</string>
     <!-- END TUTORIAL -->
-    <string name="plant">Plant</string>
 
     <string name="camera_permission_toast">Camera permission is needed to run this application</string>
     <string name="searching_for_surfaces">Searching for surfaces...</string>
@@ -90,8 +91,35 @@
     <string name="model_target_obj">models/target.obj</string>
     <string name="model_target_png">models/target.png</string>
     <!-- END TUTORIAL -->
-    <string name="model_plant1_obj">models/plant1.obj</string>
-    <string name="model_plant1_png">models/plant1.png</string>
+
+    <!-- PLANT MODELS -->
+    <string name="model_chives_obj">models/plant_models/chives/chives_model.obj</string>
+    <!-- issue -->
+    <string name="model_chives_png">models/viking.png</string>
+
+    <string name="model_watermelon_obj">models/plant_models/watermelon/source/watermelon_official.obj</string>
+    <string name="model_watermelon_png">models/plant_models/watermelon/textures/Watermelon_diffuse.png</string>
+
+    <string name="model_strawberry_obj">models/plant_models/strawberry/source/strawberry_official.obj</string>
+    <string name="model_strawberry_png">models/plant_models/strawberry/textures/straw_leave.png</string>
+
+    <string name="model_lettuce_obj">models/plant_models/lettuce/source/Lettuce_official.obj</string>
+    <string name="model_lettuce_png">models/plant_models/lettuce/textures/marulyapragı.png</string>
+
+    <string name="model_bell_pepper_obj">models/plant_models/bell-pepper/source/Bell_pepper_multicolor_SF/Bell_pepper_multicolor_SF.obj</string>
+    <string name="model_bell_pepper_png">models/plant_models/bell-pepper/textures/Bell_pepper_multicolor.jpeg</string>
+
+    <string name="model_radish_obj">models/plant_models/red-radish/OFFICIAL_RADISH.obj</string>
+    <string name="model_radish_png">models/plant_models/red-radish/textures/gltf_embedded_0.jpeg</string>
+
+    <string name="model_jalapeno_obj">models/plant_models/jalapeno-plant/source/jalapeno-SF/jalapeno-plant.obj</string>
+    <string name="model_jalapeno_png">models/plant_models/jalapeno-plant/textures/jal-albedo2.png</string>
+
+    <string name="model_tomato_obj">models/plant_models/tomato/tomato_plant.obj</string>
+    <string name="model_tomato_png">models/plant_models/tomato/tomato_plant.fbm/Cartoon_Farm_Crops_Tomato_Plant_Albedo.png</string>
+
+
+    <!-- END TUTORIAL -->
 
     <string name="failed_to_read_asset">Failed to read an asset file</string>
     <string name="exception_on_opengl">Exception on the OpenGL thread</string>

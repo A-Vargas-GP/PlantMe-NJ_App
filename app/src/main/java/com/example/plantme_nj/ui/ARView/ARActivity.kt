@@ -44,9 +44,25 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
     private val planeRenderer: PlaneRenderer = PlaneRenderer()
     private val pointCloudRenderer: PointCloudRenderer = PointCloudRenderer()
 
-    //Will be the plant models
-//    private val plantObject = ObjectRenderer()
-//    private var plantAttachment: PlaneAttachment? = null
+    //Plant models
+//    private val chivesObject = ObjectRenderer()
+//    private val bellPepperObject = ObjectRenderer()
+//    private val jalapenoObject = ObjectRenderer()
+//    private val watermelonObject = ObjectRenderer()
+//    private val strawberryObject = ObjectRenderer()
+//    private val lettuceObject = ObjectRenderer()
+//    private val radishObject = ObjectRenderer()
+//    private val tomatoObject = ObjectRenderer()
+//
+//    private var chivesAttachment: PlaneAttachment? = null
+//    private var bellPepperAttachment: PlaneAttachment? = null
+//    private var jalapenoAttachment: PlaneAttachment? = null
+//    private var watermelonAttachment: PlaneAttachment? = null
+//    private var strawberryAttachment: PlaneAttachment? = null
+//    private var lettuceAttachment: PlaneAttachment? = null
+//    private var radishAttachment: PlaneAttachment? = null
+//    private var tomatoAttachment: PlaneAttachment? = null
+
 
     //FROM TUTORIAL
     private val vikingObject = ObjectRenderer()
@@ -241,11 +257,29 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
             planeRenderer.createOnGlThread(this@ARActivity, getString(R.string.model_grid_png))
             pointCloudRenderer.createOnGlThread(this@ARActivity)
 
-            // TODO - set up the 3D objects
-            //1
-            vikingObject.createOnGlThread(this@ARActivity, getString(R.string.model_viking_obj), getString(R.string.model_viking_png))
+            //Plant SetUp
+//            tomatoObject.createOnGlThread(this@ARActivity, getString(R.string.model_tomato_obj), getString(R.string.model_tomato_png))
+//            bellPepperObject.createOnGlThread(this@ARActivity, getString(R.string.model_bell_pepper_obj), getString(R.string.model_bell_pepper_png))
+//            radishObject.createOnGlThread(this@ARActivity, getString(R.string.model_radish_obj), getString(R.string.model_radish_png))
+//            strawberryObject.createOnGlThread(this@ARActivity, getString(R.string.model_strawberry_obj), getString(R.string.model_strawberry_png))
+//            chivesObject.createOnGlThread(this@ARActivity, getString(R.string.model_chives_obj), getString(R.string.model_chives_png))
+//            watermelonObject.createOnGlThread(this@ARActivity, getString(R.string.model_watermelon_obj), getString(R.string.model_watermelon_png))
+//            lettuceObject.createOnGlThread(this@ARActivity, getString(R.string.model_lettuce_obj), getString(R.string.model_lettuce_png))
+//            jalapenoObject.createOnGlThread(this@ARActivity, getString(R.string.model_jalapeno_obj), getString(R.string.model_jalapeno_png))
+//
+//            tomatoObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            bellPepperObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            radishObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            strawberryObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            chivesObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            watermelonObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            lettuceObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
+//            jalapenoObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
 
-            //2
+//            TUTORIAL STUFF
+//            1
+            vikingObject.createOnGlThread(this@ARActivity, getString(R.string.model_viking_obj), getString(R.string.model_viking_png))
+//            2
             vikingObject.setMaterialProperties(0.0f, 3.5f, 1.0f, 6.0f)
 
         } catch (e: IOException) {
@@ -291,6 +325,78 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
                 visualizePlanes(camera, projectionMatrix)
 
                 // TODO: Call drawObject() for Viking, Cannon and Target here
+//                drawObject(
+//                    tomatoObject,
+//                    tomatoAttachment,
+//                    Mode.TOMATO.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    radishObject,
+//                    radishAttachment,
+//                    Mode.RADISH.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    watermelonObject,
+//                    watermelonAttachment,
+//                    Mode.WATERMELON.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    lettuceObject,
+//                    lettuceAttachment,
+//                    Mode.LETTUCE.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    strawberryObject,
+//                    strawberryAttachment,
+//                    Mode.STRAWBERRY.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    bellPepperObject,
+//                    bellPepperAttachment,
+//                    Mode.BELL_PEPPER.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    chivesObject,
+//                    chivesAttachment,
+//                    Mode.CHIVES.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+//
+//                drawObject(
+//                    jalapenoObject,
+//                    jalapenoAttachment,
+//                    Mode.JALAPENO.scaleFactor,
+//                    projectionMatrix,
+//                    viewMatrix,
+//                    lightIntensity
+//                )
+
                 drawObject(
                     vikingObject,
                     vikingAttachment,
@@ -452,14 +558,40 @@ class ARActivity : AppCompatActivity(), GLSurfaceView.Renderer {
                             && trackable.orientationMode
                             == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)
                 ) {
+
                     vikingAttachment = addSessionAnchorFromAttachment(vikingAttachment, hit)
 
-//                    when (mode) {
-//                        Mode.VIKING -> vikingAttachment = addSessionAnchorFromAttachment(vikingAttachment, hit)
+//                    val profileName = intent.getStringExtra("AR_Plant").toString()
+//                    Log.e("Profile Name", profileName)
+
+//                    when (profileName) {
+//                        "Bell Pepper" -> Mode.BELL_PEPPER
+//                        "Chives" -> Mode.CHIVES
+//                        "Watermelon" -> Mode.WATERMELON
+//                        "Radish" -> Mode.RADISH
+//                        "Jalapeño" -> Mode.JALAPENO
+//                        "Lettuce" -> Mode.LETTUCE
+//                        "Tomato" -> Mode.TOMATO
+//                        "Strawberry" -> Mode.STRAWBERRY
+////                        Mode.VIKING -> vikingAttachment = addSessionAnchorFromAttachment(vikingAttachment, hit)
 ////                        Mode.CANNON -> cannonAttachment = addSessionAnchorFromAttachment(cannonAttachment, hit)
 ////                        Mode.TARGET -> targetAttachment = addSessionAnchorFromAttachment(targetAttachment, hit)
 //                    }
-                    // TODO: Create an anchor if a plane or an oriented point was hit
+
+//                    when (mode)
+//                    {
+//                        Mode.BELL_PEPPER -> bellPepperAttachment = addSessionAnchorFromAttachment(bellPepperAttachment, hit)
+//                        Mode.CHIVES -> chivesAttachment = addSessionAnchorFromAttachment(bellPepperAttachment, hit)
+//                        Mode.WATERMELON -> watermelonAttachment = addSessionAnchorFromAttachment(watermelonAttachment, hit)
+//                        Mode.RADISH -> radishAttachment = addSessionAnchorFromAttachment(radishAttachment, hit)
+//                        Mode.JALAPENO -> jalapenoAttachment = addSessionAnchorFromAttachment(jalapenoAttachment, hit)
+//                        Mode.LETTUCE -> lettuceAttachment = addSessionAnchorFromAttachment(lettuceAttachment, hit)
+//                        Mode.TOMATO -> tomatoAttachment = addSessionAnchorFromAttachment(tomatoAttachment, hit)
+//                        Mode.STRAWBERRY -> strawberryAttachment = addSessionAnchorFromAttachment(strawberryAttachment, hit)
+//                        Mode.VIKING -> TODO()
+//                        Mode.CANNON -> TODO()
+//                        Mode.TARGET -> TODO()
+//                    }
                     break
                 }
             }

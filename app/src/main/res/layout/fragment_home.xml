@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-127dp">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
             android:id="@+id/topText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/roboto_black"
             android:gravity="center"
             android:text="@string/home_screen_title"
             android:textAlignment="center"
@@ -29,7 +27,7 @@
             android:id="@+id/title_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/roboto_black"
             android:gravity="center"
             android:text="@string/home_screen_title"
             android:textAlignment="center"
@@ -45,178 +43,451 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/plantme_inverted_color" />
 
-        <TextView
-            android:id="@+id/location_title"
-            android:background="@drawable/rounded_corner"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/location_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
             android:layout_below="@id/imageView"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/home_weather_screen"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="20sp" />
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/location_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/home_weather_screen"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/location_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/condition_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_toRightOf="@id/location_card"
+            android:layout_alignBottom="@id/location_card"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/condition_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/home_weather_conditions"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/condition_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/condition_title"
+                    android:fontFamily="@font/avenir"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/temperature_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/location_card"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/temperature_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/home_weather_temp"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temperature_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@id/temperature_title"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/real_feel_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_toRightOf="@id/temperature_card"
+            android:layout_alignBottom="@id/temperature_card"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+            <TextView
+                    android:id="@+id/real_feel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/home_weather_real_feel"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/real_feel_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/real_feel_title"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/humidity_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/temperature_card"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/humidity_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/home_weather_humidity"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/humidity_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/humidity_title"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/humidity_percentage_fill1_wght400_grad0_opsz48"
+                    android:alpha="0.4">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/humidity_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/humidity_photo"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/wind_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_toRightOf="@id/humidity_card"
+            android:layout_alignBottom="@id/humidity_card"            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/wind_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/home_weather_wind"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/wind_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wind_title"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/air_fill1_wght400_grad0_opsz48"
+                    android:alpha="0.4">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/wind_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/wind_photo"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sunrise_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/humidity_card"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/sunrise_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/home_weather_sunrise"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/sunrise_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sunrise_title"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/wb_sunny_fill1_wght400_grad0_opsz48"
+                    android:alpha="0.4">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/sunrise_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/sunrise_photo"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sunset_card"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_toRightOf="@id/sunrise_card"
+            android:layout_alignBottom="@id/sunrise_card"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/card_back">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_gray">
+
+                <TextView
+                    android:id="@+id/sunset_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/home_weather_sunset"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/sunset_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sunset_title"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/wb_twilight_fill1_wght400_grad0_opsz48"
+                    android:alpha="0.4">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/sunset_text"
+                    android:freezesText="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/sunset_photo"
+                    android:fontFamily="@font/avenir"
+                    android:gravity="center"
+                    android:text="Testing"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquoise"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/location_text"
-            android:freezesText="true"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/location_title"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Testing"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/dateTime_title"
-            android:background="@drawable/rounded_corner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/location_text"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/home_weather_datetime"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/dateTime_text"
-            android:freezesText="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/dateTime_title"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Testing"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/condition_title"
-            android:background="@drawable/rounded_corner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/dateTime_text"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/home_weather_conditions"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/condition_text"
-            android:freezesText="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/condition_title"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Testing"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/temperature_title"
-            android:background="@drawable/rounded_corner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/condition_text"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/home_weather_temp"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/temperature_text"
-            android:freezesText="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/temperature_title"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Testing"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/sunrise_title"
-            android:background="@drawable/rounded_corner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/temperature_text"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/home_weather_sunrise"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/sunrise_text"
-            android:freezesText="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/sunrise_title"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Testing"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/sunset_title"
-            android:background="@drawable/rounded_corner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/sunrise_text"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="@string/home_weather_sunset"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/sunset_text"
-            android:freezesText="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/sunset_title"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Testing"
-            android:textAlignment="center"
-            android:textColor="@color/turquoise"
-            android:textSize="18sp" />
+            android:layout_below="@id/sunset_card">
+        </TextView>
     </RelativeLayout>
 </ScrollView>

@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlantMe_NJ"
         tools:targetApi="32">
+
         <activity
             android:name=".ui.ARView.ARActivity"
             android:exported="false" />

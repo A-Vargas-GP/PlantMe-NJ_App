@@ -31,5 +31,6 @@
 package com.example.plantme_nj.rendering_KT
 
 enum class Mode(val scaleFactor: Float) {
-  VIKING(1.0f), CANNON(0.2f), TARGET(0.5f)
+  VIKING(1.0f), CANNON(0.2f), TARGET(0.5f), BELL_PEPPER(0.1f), CHIVES(1.0f), JALAPENO(1.0f),
+  WATERMELON(1.0f), STRAWBERRY(1.0f), LETTUCE(1.0f), RADISH(1.0f), TOMATO(1.0f)
 }
