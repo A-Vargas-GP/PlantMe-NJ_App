@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/roboto_black"
         android:textColor="@color/turquoise"
         android:textSize="30sp"
         android:textAlignment="center"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/activity_horizontal_margin"
         android:layout_below="@id/plant_v_season_title"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/roboto_medium"
         android:textColor="@color/turquoise"
         android:textSize="20sp"
         android:textAlignment="center"
@@ -45,6 +45,7 @@
         android:background="@drawable/rounded_corner"
         android:drawableLeft="@drawable/icons_filled_plant"
         android:text="@string/plant_types_option1"
+        android:fontFamily="@font/roboto_bold"
         android:textAllCaps="false"
         android:textColor="@color/turquoise"
         android:textSize="30sp" />
@@ -59,6 +60,7 @@
         android:background="@drawable/rounded_corner"
         android:drawableLeft="@drawable/icons_filled_season"
         android:text="@string/plant_types_option2"
+        android:fontFamily="@font/roboto_bold"
         android:textAllCaps="false"
         android:textColor="@color/turquoise"
         android:textSize="30sp" />

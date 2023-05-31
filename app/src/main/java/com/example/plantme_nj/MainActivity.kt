@@ -55,8 +55,10 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var locationTextView: TextView
     lateinit var temperatureTextView: TextView
-    lateinit var dateTimeTextView: TextView
+    lateinit var realFeelTextView: TextView
     lateinit var conditionsTextView: TextView
+    lateinit var humidityTextView: TextView
+    lateinit var windTextView: TextView
     lateinit var sunriseTextView: TextView
     lateinit var sunsetTextView: TextView
 
@@ -96,10 +98,11 @@ class MainActivity : AppCompatActivity() {
         locationTextView = findViewById<TextView>(R.id.location_text)
         temperatureTextView = findViewById<TextView>(R.id.temperature_text)
         conditionsTextView = findViewById<TextView>(R.id.condition_text)
-        dateTimeTextView = findViewById<TextView>(R.id.dateTime_text)
+        realFeelTextView = findViewById<TextView>(R.id.real_feel_text)
         sunriseTextView = findViewById<TextView>(R.id.sunrise_text)
         sunsetTextView = findViewById<TextView>(R.id.sunset_text)
-
+        humidityTextView = findViewById<TextView>(R.id.humidity_text)
+        windTextView = findViewById<TextView>(R.id.wind_text)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         Log.e("lat", weather_url)
@@ -237,21 +240,25 @@ class MainActivity : AppCompatActivity() {
 
                 //Convert Celsius temp into Fahrenheit to two decimal places
                 var currTemp = obj2.getDouble("temp")
+                var feelTemp = obj2.getDouble("app_temp")
                 currTemp = (currTemp * (9.0/5.0)) + 32
+                feelTemp = (feelTemp * (9.0/5.0)) + 32
 
                 //Current Date and Time
-                val current = LocalDateTime.now()
-                val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
-                val formatted = current.format(formatter)
+                //val current = LocalDateTime.now()
+                //val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
+                //val formatted = current.format(formatter)
 
                 location = obj2.getString("city_name")
                 // set the temperature and the city
                 // name using getString() function
 
-                locationTextView.text = obj2.getString("city_name")
-                temperatureTextView.text = String.format("%.2f", currTemp) + " deg Fahrenheit"
-                dateTimeTextView.text = formatted
+                locationTextView.text = obj2.getString("city_name") + ", " + obj2.getString("state_code")
+                temperatureTextView.text = String.format("%.2f", currTemp) + "°F"
+                realFeelTextView.text = String.format("%.2f", feelTemp) + "°F"
                 conditionsTextView.text = obj2.getJSONObject("weather").getString("description")
+                humidityTextView.text = obj2.getString("rh") + "%"
+                windTextView.text = String.format("%.2f", obj2.getDouble("wind_spd")) + " mph " + obj2.getString("wind_cdir")
 
                 //API is ahead by 4 hours
                 val sunRise = obj2.getString("sunrise")
