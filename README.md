@@ -51,15 +51,27 @@ While attempting to complete this functionality, I encountered unexpected techni
 ## Inspiration
 I aimed to develop a mobile application using my programming skills and design abilities. Using Android Studio, the app would be focused on gardening, specifically selecting which plants would be ideal to plant in New Jersey, determining which plant is suitable for a user, and visually displaying the potential plant in a specific spot using AR. It includes information regarding a specific crop, such as planting type, planting distance, harvesting time, planting time, and more. To form the design features, I used Adobe Photoshop, Illustrator, and XD.
 
-This project is reflective of a hobby that I am passionate about where I wanted to create a project that could be useful in my life. About six years ago, I taught myself how to garden and I grew several types of vegetables like tomatoes, jalapenos, cilantro, and mint. Through meticulous research, I bought tools to culminate successful plants like indoor plant lights, pots, and a heating pad, and learned about the concept of germination, transplanting, and growth seasons. However, because of the lack of space, I, unfortunately, had to remove all of the plants and leave the hobby behind. Luckily, this year, with more space, I had the opportunity to rekindle my gardening. This spring, I set out to complete my previous goal of regaining my green thumb, and I managed to get the flower beds ready for planting. Despite having experience with having plants produce frequent crops, most of my plants did not get to the seedling stage.
+This project is reflective of a hobby that I am passionate about and indicates my desire to create a project that could be useful in my life. About six years ago, I taught myself how to garden and I grew several types of vegetables like tomatoes, jalapenos, cilantro, and mint. Through meticulous research, I bought tools to culminate successful plants like indoor plant lights, pots, and a heating pad, and learned about the concept of germination, transplanting, and growth seasons. However, because of the lack of space, I, unfortunately, had to remove all of the plants and leave the hobby behind. Luckily, this year, with more space, I had the opportunity to rekindle my gardening. This spring, I set out to complete my previous goal of regaining my green thumb, and I managed to get the flower beds ready for planting. Despite having experience with having plants produce frequent crops, most of my plants did not get to the seedling stage.
 
-After an unsuccessful harvest season, I found it complicated to figure out exactly what went wrong. Why did my strawberries never grow? Did I plant them in the wrong spot? Why did my watermelon plant take over the entire garden bed? Why did my watermelon never turn red inside? Despite researching on numerous websites, I could not conclude what might have been the possible reasons behind the faulty growth. Reasons ranged from a weak seed, unhealthy soil, lack of sun, not enough space, and more. It was unlikely to be unhealthy soil since I had just bought a new potting mix, and it was not lacking sun since it is facing the sun’s direction. However, one thing that I forgot to keep note of was the right planting time and enough plant distance. From brief research online, there were not many helpful tools to keep track of this information, only websites that gave the right watering day and possible planting formats to promote a good growing space. Thus, I thought this would be the perfect opportunity to turn this into a year-long project where I can turn my idea of an app that can map plant space and show an end-product of a plant into a functional product.
+After an unsuccessful harvest season, I found it complicated to figure out exactly what went wrong. Why did my strawberries never grow? Did I plant them in the wrong spot? Why did my watermelon plant take over the entire garden bed? Why did my watermelon never turn red inside? Despite researching on numerous websites, I could not conclude what might have been the possible reasons behind the faulty growth. Reasons ranged from a weak seed, unhealthy soil, lack of sun, not enough space, and more. It was unlikely to be unhealthy soil since I had just bought a new potting mix, and it was not lacking sun since it is facing the sun’s direction. However, one thing that I forgot to keep note of was the right planting time and enough plant distance. From brief research online, there were not many helpful tools to keep track of this information. For instance, there were only websites that gave the right watering day and possible planting formats to promote a good growing space. Thus, I thought this would be the perfect opportunity to turn this into a year-long project where I can turn my idea of an app that can map plant space and show an end-product of a plant into a functional product.
 
 ## Installation
 
 ### Downloading APK
 
-pending info
+First, for your Android Device, 
+* Open the Settings app on your Android device.
+* In the Settings menu, tap Apps.
+* Tap Special app access (or Advanced > Special app access).
+* Tap Install unknown apps.
+* Select an app to use to install an APK file—your browser and file management apps are the best option here.
+* Tap the Allow from this source slider to allow APK files to be installed via that app.
+
+In the folder labeled 'RELEASE,' there will be a file named [`app-debug.apk`](RELEASE/app-debug.apk)
+
+Once downloaded, locate the file on your phone in your Downloads folder, and tap the APK file.
+
+If prompted, allow for install.
 
 ### Building the App Project
 
