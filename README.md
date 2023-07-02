@@ -9,10 +9,11 @@
 - [Future Hopes](#future-features)
 - [Sample Photos](photos/design-plants.md)
 - [Design Plans](photos/design-plants.md)
-- [Previous Mock-Up]((https://github.com/A-Vargas-GP/Plant4U-MicroThesis))
+- [Previous Mock-Up](https://github.com/A-Vargas-GP/Plant4U-MicroThesis)
 - [Proposal](docs/Final_Proposal-Amy_Vargas.pdf)
 - [Inspiration](#inspiration)
 - [Installation](#installation)
+- [Language and Frameworks](#language-and-frameworks)
 - [Key Terms](#key-terms)
 - [Credits](#credits)
 
@@ -87,6 +88,12 @@ With Android Studio open,
 - Cool Season: Spring and fall
 - Warm Season: Summer
 
+## Language and Frameworks
+Using Android Studio as the IDE, this app is coded in Kotlin and SQLite for the backend. It features an ARCoreSDK, Typeform, and a WeatherAPI integration. 
+
+In the previous version, it used a WeatherBit API integration.
+
+
 ## Credits
 - AR Related Resources
     - [AR Template](https://www.kodeco.com/6986535-arcore-with-kotlin-getting-started)
@@ -102,3 +109,4 @@ With Android Studio open,
 - Weather Related Resources
     - [WeatherBitAPI Setup](https://www.geeksforgeeks.org/how-to-build-a-weather-app-in-android/)
     - [WeatherBitAPI Data Meaning](https://www.weatherbit.io/api/weather-current)
+    - [WeatherAPI Data Meaning](https://www.weatherapi.com/docs/#)

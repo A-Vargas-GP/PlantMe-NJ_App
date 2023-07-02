@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     var weather_url = ""
 
     //id for url
-    var api_id = "83c4cdc851354aa0b97c251aa77a3c0f"
+    var api_id = "a1da4394c79948bb982205326233105"
 
     lateinit var locationTextView: TextView
     lateinit var temperatureTextView: TextView
@@ -197,7 +197,7 @@ class MainActivity : AppCompatActivity() {
             {
                 this.currentLocation = location
             }
-            weather_url = "https://api.weatherbit.io/v2.0/current?" + "lat=" + location?.latitude + "&lon=" + location?.longitude + "&key=" + api_id
+            weather_url = "https://api.weatherapi.com/v1/forecast.json?" + "key=" + api_id +"&q=" + location?.latitude + "," + location?.longitude + "&days=1&aqi=no&alerts=no"
             getTemp()
         }
 
@@ -229,52 +229,67 @@ class MainActivity : AppCompatActivity() {
                 // get the JSON object
                 val obj = JSONObject(response)
 
-                // get the Array from obj of name - "data"
-                val arr = obj.getJSONArray("data")
-                Log.e("lat obj1", arr.toString())
+                val curr_location = obj.getJSONObject("location") //refers to location -- WeatherAPI
+                val curr_weather = obj.getJSONObject("current") //refers to weather -- WeatherAPI
+                val curr_forecast = obj.getJSONObject("forecast") //refers to weather -- WeatherAPI
 
-                // get the JSON object from the
-                // array at index position 0
-                val obj2 = arr.getJSONObject(0)
-                Log.e("lat obj2", obj2.toString())
+                //Not needed for WeatherAPI -- current version
+                //Only needed for WeatherBitAPI
+                /*
+                    // get the JSON object
+                    //val obj = JSONObject(response)
 
+                    // get the Array from obj of name - "data"
+                    //val arr = obj.getJSONArray("data")
+                    //Log.e("lat obj1", arr.toString())
+
+                    // get the JSON object from the
+                    // array at index position 0
+                    val obj2 = arr.getJSONObject(0)
+                    Log.e("lat obj2", obj2.toString())
+                 */
+
+                //Needs to have reference to obj2 if using WeatherBitAPI
                 //Convert Celsius temp into Fahrenheit to two decimal places
-                var currTemp = obj2.getDouble("temp")
-                var feelTemp = obj2.getDouble("app_temp")
-                currTemp = (currTemp * (9.0/5.0)) + 32
-                feelTemp = (feelTemp * (9.0/5.0)) + 32
+                //var currTemp = obj2.getDouble("temp")
+                //var feelTemp = obj2.getDouble("app_temp")
+                //currTemp = (currTemp * (9.0/5.0)) + 32
+                //feelTemp = (feelTemp * (9.0/5.0)) + 32
 
                 //Current Date and Time
                 //val current = LocalDateTime.now()
                 //val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
                 //val formatted = current.format(formatter)
 
-                location = obj2.getString("city_name")
                 // set the temperature and the city
                 // name using getString() function
+                locationTextView.text = curr_location.getString("name") + ", " + curr_location.getString("region")
+                temperatureTextView.text = curr_weather.getString("temp_f") + "°F"
+                realFeelTextView.text = curr_weather.getString("feelslike_f") + "°F"
+                conditionsTextView.text = curr_weather.getJSONObject("condition").getString("text")
+                humidityTextView.text = curr_weather.getString("humidity") + "%"
+                windTextView.text = curr_weather.getString("wind_mph") + " mph " + curr_weather.getString("wind_dir")
 
-                locationTextView.text = obj2.getString("city_name") + ", " + obj2.getString("state_code")
-                temperatureTextView.text = String.format("%.2f", currTemp) + "°F"
-                realFeelTextView.text = String.format("%.2f", feelTemp) + "°F"
-                conditionsTextView.text = obj2.getJSONObject("weather").getString("description")
-                humidityTextView.text = obj2.getString("rh") + "%"
-                windTextView.text = String.format("%.2f", obj2.getDouble("wind_spd")) + " mph " + obj2.getString("wind_cdir")
+                //WeatherBitAPI is ahead by 4 hours
+                val forecastSun = curr_forecast.getJSONArray("forecastday")
+                val sunRise = forecastSun.getJSONObject(0).getJSONObject("astro").getString("sunrise")
+                /*
+                    var riseHour = sunRise.take(2).toInt()
+                    val riseMinutes = sunRise.takeLast(2)
+                    riseHour-=4
+                    if (riseHour < 0)
+                        riseHour = 0
+                 */
+                sunriseTextView.text = sunRise
 
-                //API is ahead by 4 hours
-                val sunRise = obj2.getString("sunrise")
-                var riseHour = sunRise.take(2).toInt()
-                val riseMinutes = sunRise.takeLast(2)
-                riseHour-=4
-                if (riseHour < 0)
-                    riseHour = 0
-                sunriseTextView.text = "$riseHour:$riseMinutes am"
-
-                //API is behind 8 hours
-                val sunSet = obj2.getString("sunset")
-                var setHour = sunSet.take(2).toInt()
-                val setMinutes = sunSet.takeLast(2)
-                setHour+=8
-                sunsetTextView.text = "$setHour:$setMinutes pm"
+                //WeatherBitAPI is behind 8 hours
+                val sunSet = forecastSun.getJSONObject(0).getJSONObject("astro").getString("sunset")
+                /*
+                    var setHour = sunSet.take(2).toInt()
+                    val setMinutes = sunSet.takeLast(2)
+                    setHour+=8
+                 */
+                sunsetTextView.text = sunSet
             },
             // In case of any error
             { locationTextView.text = "That didn't work!" })
