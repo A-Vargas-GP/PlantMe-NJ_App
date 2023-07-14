@@ -205,7 +205,7 @@ class MainActivity : AppCompatActivity() {
 //            ?.addOnSuccessListener { location: Location? ->
 //                //get latitude and longitude
 //                //create HTTP url
-//                weather_url = "https://api.weatherbit.io/v2.0/current?" + "lat=" + location?.latitude + "&lon=" + location?.longitude + "&key=" + api_id
+//                old_weather_url = "https://api.weatherbit.io/v2.0/current?" + "lat=" + location?.latitude + "&lon=" + location?.longitude + "&key=" + api_id
 //                Log.e("lat", weather_url.toString())
 //                getTemp()
 //            }
